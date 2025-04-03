@@ -1,15 +1,21 @@
-from transformers import pipeline
+import openai
+import os
+from dotenv import load_dotenv
 
-chatbot = pipeline("conversational", model="facebook/blenderbot-400M-distill")
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def get_response(user_input):
-    response = chatbot(user_input)
-    return response[0]["generated_text"]
+    """Generate response using OpenAI API"""
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": user_input}]
+    )
+    return response["choices"][0]["message"]["content"]
 
 if __name__ == "__main__":
     while True:
         user_input = input("You: ")
         if user_input.lower() == "exit":
             break
-        response = get_response(user_input)
-        print(f"Bot: {response}")
+        print("Bot:", get_response(user_input))
