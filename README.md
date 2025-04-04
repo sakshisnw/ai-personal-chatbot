@@ -1,4 +1,4 @@
-🤖 AI Personal Chatbot (Conversational AI)
+## 🤖 AI Personal Chatbot (Conversational AI)
 
 Welcome to your **AI Personal Chatbot** – a conversational agent built using Hugging Face Transformers and Streamlit!  
 Whether you're looking to explore natural language processing, learn how conversational models work, or build something fun — this project is for you.
@@ -80,5 +80,5 @@ But now — it's in a **web app form**!
 - Clean and responsive UI with Streamlit
 - Easy to customize and scale
 - Modular code for maintainability
-```
+
 
