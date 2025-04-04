@@ -22,6 +22,6 @@ if st.button("Send"):
 
 st.write("### Chat History")
 for i in range(0, len(st.session_state.history), 2):
-    st.write(f"**You:** {st.session_state.history[i]}")
+    st.write(f"**Bot:** {st.session_state.history[i]}")
     if i+1 < len(st.session_state.history):
-        st.write(f"**Bot:** {st.session_state.history[i+1]}")
+        st.write(f"**You:** {st.session_state.history[i+1]}")

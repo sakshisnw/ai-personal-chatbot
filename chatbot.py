@@ -18,4 +18,4 @@ if __name__ == "__main__":
         user_input = input("You: ")
         if user_input.lower() == "exit":
             break
-        print("Bot:", get_response(user_input))
+        print("You:", get_response(user_input))
